@@ -194,7 +194,7 @@ app.get('/del/:name',async(req,res)=>{console.log("del",req.params.name);
         console.log("while deleting",err);
         else{
            console.log("DELETED");
-            res.redirect('/addtocart');
+            res.redirect('/go');
         }
     });
     
