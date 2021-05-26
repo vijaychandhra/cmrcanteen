@@ -1,0 +1,89 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="nav.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+  .navbars{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background: rgb(73, 79,82);
+    color: white;
+  }
+  .cartbox{
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 12.5vh;
+}
+.cartsbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgb(71, 71,71);
+    background: white;
+}
+.cartimg{
+    height: 150px;
+    width: 150px;
+}
+.cartbtn{
+    background-color:lightcoral;
+    border-radius: 10%;
+    color: white;
+    cursor: pointer;
+    padding: 5px 5px;
+}
+</style>
+<div class="navbars">
+  <h1 ><%=sess.name%>'s cart</h1>
+  <a href="/back"><button class="cartbtn">goback</button></a>
+  <a href="/proceed"><button class="cartbtn">place order</button></a>
+  <h4 style="text-align-last:center ;">Totalprice=<%=sum%></h1>
+  </div>
+
+<div class="cartbox">
+  <% for( i in p){%>
+    
+    <form action="/removefromcart" method="POST" >
+      <div class="cartsbox">
+      <img class="cartimg" src="<%= p[i].product%>" alt="Card image cap">
+        <h4><%=p[i].name%></h4>
+        <input type="text" value="<%= p[i].name%>" name="name" hidden>
+        <input type="text" value="<%= p[i].product%>" hidden>
+        <h4>Price : <%=p[i].price%>$</h4>
+        <h4>quantity : <%=p[i].quantity%></h4>
+        <input type="text" value="<%= p[i].price%>" name="price" hidden>
+         <p>Enter Quantity Here To Remove</p>
+         <input type="number" name="quantity">  
+         <br/>
+         <button class="cartbtn" type="submit">remove</button>
+         <a href="/del/<%=p[i].name%>">delete</a>
+    </div>
+    </form>
+    <% }%>
+  </div> 
+       
+   
+</body><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+  
+</script>
+</html>

@@ -1,0 +1,92 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bill.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+      .bill{
+        display: flex;
+        flex-direction: column;
+        background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+        padding:5.4vh 12vh;
+      }
+      .table-responsive-sm{
+        padding: 5vh 5vh;
+        background-color: aliceblue;
+      }
+    .navbars{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 10vh;
+        background: rgb(73, 79,82);
+        color: white;
+      }
+    .cartbtn{
+        background-color:lightcoral;
+        border-radius: 10%;
+        color: white;
+        cursor: pointer;
+        padding: 5px 5px;
+    }
+    .table-striped{
+      border: 3px solid grey;
+    }
+    .head{
+      border: 3px solid gray;
+    }
+    </style>
+  <div class="navbars">
+  <h1 ><%=sess.name%>'s bill </h1>
+  <a href="/go"><button class="cartbtn">goback</button></a>
+  <a href="/checkout"><button class="cartbtn">Done</button></a>
+  <h4 style="text-align-last:center ;">Totalprice=<%=sum%></h1>
+  </div>
+  <div class="bill">
+ <div class="table-responsive-sm">
+  <table class="table table-striped">
+      <thead class="head">
+          <tr>
+              <th class="center">S.NO</th>
+              <th>Product</th>
+              <th>Description</th>
+              <th class="right">Price</th>
+              <th class="center">Qty</th>
+              <th class="right">Total</th>
+          </tr>
+      </thead>
+      <tbody>
+        <% for( i in p){%>
+          <% if(p[i].quantity){%>
+            <tr>
+              <td class="center"><%=i%></td>
+              <td class="right"><img  style="width: 140px;height: 120px;border-radius: 50%;" src="<%= p[i].product%> "></td>
+              <td class="left strong"><%= p[i].name%>  </td>
+              <td class="left"><%=p[i].price%></td>
+              <td class="center"><%=p[i].quantity%> </td>
+              <td class="right"><%= p[i].price*p[i].quantity%></td>
+          </tr> 
+              <% }%>  
+          <% }%>
+        </tbody>
+      </table>
+  </div>
+          
+</div>
+
+
+   </body><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+  
+</script>
+</html>

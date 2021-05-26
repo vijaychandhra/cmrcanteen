@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mainpage</title>
+</head>
+<body >
+    <div><h1>WELCOME MR VIJAY </h1></div><br><br>
+    
+     <br><br>TO ADD DATA<br><br>
+    <form action="/post" method="POST">
+        name<input type="text" name="name">
+        price<input type="text" name="price" >
+         product<input type="text" name="product">
+        <button type="submit">submit</button>
+        </form>
+        <br><br>
+        <form action="/get" method="POST">
+            to find details enter name<input type="text" name="name">
+            <button type="submit">submit</button>
+            </form>
+            <br><br>
+            <form action="/delete" method="POST">
+                to delete a file<input type="text" name="name">
+                <button type="submit">submit</button>
+                </form>
+                <br><br>
+            <a href="/findingallfiles" ><button>click here for entire details</button></a>
+            
+            <a href="/deleteall" ><button>to delete all files</button></a>
+           <a href="/ll">press here</a>
+</body>
+</html>

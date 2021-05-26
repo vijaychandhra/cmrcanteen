@@ -1,0 +1,89 @@
+.bodystyle{
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background: rgb(73, 79,82);
+    color: white;
+}
+.navbar1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background: rgb(73, 79,82);
+    color: white;
+}
+.menbox{
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10vh;
+}
+.menubox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgb(71, 71,71);
+    background: white;
+}
+.menbtn{
+    background-color:lightcoral;
+    border-radius: 10%;
+    color: white;
+}
+.menimg{
+    height: 150px;
+    width: 150px;
+}
+.loginbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login{
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgb(71, 71,71);
+    margin: 40px;
+    background: white;
+    padding: 50px 50px; 
+    position: absolute;
+    left: 70vh;
+    bottom: 20vh;
+}
+
+.imgs{
+    height: 600px;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    margin-top: 20px;
+}
+
+.loginbtn{
+    background-color:lightcoral;
+    border-radius: 10%;
+    color: white;
+    padding: 5px 7px;
+    border: none;
+}
+.signinbtn{
+    background-color:lightcoral;
+    border-radius: 10%;
+    color: white;
+    padding: 5px 7px;
+    margin-left: 160px;
+    border: none;
+}
+
+
