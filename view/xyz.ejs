@@ -42,6 +42,11 @@
     .head{
       border: 3px solid gray;
     }
+    .center
+    {
+      font-weight: 400px;
+      font-size: 50px; 
+    }
     </style>
   <div class="navbars">
   <h1 ><%=sess.name%>'s bill </h1>
@@ -55,23 +60,23 @@
       <thead class="head">
           <tr>
               <th class="center">S.NO</th>
-              <th>Product</th>
-              <th>Description</th>
-              <th class="right">Price</th>
+              <th class="center">Product</th>
+              <th class="center">Description</th>
+              <th class="center">Price</th>
               <th class="center">Qty</th>
-              <th class="right">Total</th>
+              <th class="center">Total</th>
           </tr>
       </thead>
       <tbody>
         <% for( i in p){%>
           <% if(p[i].quantity){%>
             <tr>
-              <td class="center"><%=i%></td>
+              <td class="center"><%= (i*1+1*1) %></td>
               <td class="right"><img  style="width: 140px;height: 120px;border-radius: 50%;" src="<%= p[i].product%> "></td>
-              <td class="left strong"><%= p[i].name%>  </td>
-              <td class="left"><%=p[i].price%></td>
+              <td class="center"><%= p[i].name%>  </td>
+              <td class="center"><%=p[i].price%></td>
               <td class="center"><%=p[i].quantity%> </td>
-              <td class="right"><%= p[i].price*p[i].quantity%></td>
+              <td class="center"><%= p[i].price*p[i].quantity%></td>
           </tr> 
               <% }%>  
           <% }%>
