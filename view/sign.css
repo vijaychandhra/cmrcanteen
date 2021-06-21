@@ -8,6 +8,15 @@ h1 {
   font-weight: 550;
   margin-bottom: 4vh;
 }
+.head {
+  margin-left: 85vh;
+  margin-top: 13vh;
+  position: absolute;
+  color: #a18cd1;
+  background-color: white;
+  padding: 1vh;
+  border-radius: 17px;
+}
 .inputf {
   margin-left: 1vh;
   padding-left: 1vh;
