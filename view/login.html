@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="nav.css">
 <nav class="navbar">
 <ul>
-<h1>CMR CANTEEN<h1>
+<h1>mee canteen<h1>
 </ul>
 </nav>
 <body class="bodystyle">
@@ -32,14 +32,15 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
 <div class="loginbox">
     <div class="login">
                 <form action="/signin" method="POST">
                     <h1>LOGIN</h1>
                     <label  for="name">Enter Name:</label>
-                    <input type="text" name="name" id="name"><br></br>
+                    <input type="text" name="name" id="name" required minlength="10" maxlength="10"><br></br>
                     <label for="nam">Enter Password:</label>
-                    <input type="password" name="password" id="nam"><br/><br/>
+                    <input type="password" name="password" id="nam" required minlength="8"><br/><br/>
                     <button class="loginbtn" type="submit">login</button>
                     <a href="sign.html">signup</a>
                 </form>
